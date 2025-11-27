@@ -1,4 +1,2607 @@
+<!DOCTYPE html>
 
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UGO WAYS SPORTS - BE PROACTIVE</title>
+
+    <!-- Load Tailwind CSS -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Use Inter font and define custom colors -->
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        'brand-blue': '#232B73',
+
+                        'brand-white': '#FFFFFF',
+
+                    },
+
+                    fontFamily: {
+
+                        sans: ['Inter', 'sans-serif'],
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <style>
+
+        /* Custom CSS for the fixed background image and overlay */
+
+        .hero-background {
+
+            /* Using the new provided URL for the main background */
+
+            background-image: url('https://i.imgur.com/q1jikvc.jpeg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            position: relative;
+
+        }
+
+        /* Overlay for the 40% opacity blue color */
+
+        .hero-background::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background-color: #232B73;
+
+            opacity: 0.9; /* 40% opacity as requested */
+
+            z-index: 0;
+
+        }
+
+        /* Ensuring content is above the overlay */
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 10;
+
+        }
+
+        /* Custom shadow for the header image to mimic depth */
+
+        .image-depth-shadow {
+
+            box-shadow: 0 25px 50px -12px rgba(35, 43, 115, 0.7), 0 0 15px rgba(0, 0, 0, 0.2);
+
+            transform: rotate(2deg); /* A slight tilt for dynamic effect */
+
+            transition: transform 0.3s ease;
+
+        }
+
+        .image-depth-shadow:hover {
+
+            transform: rotate(0deg) scale(1.05);
+
+        }
+
+        /* Styling for the translucent blue background of the category cards */
+
+        .translucent-blue-bg {
+
+            background-color: rgba(35, 43, 115, 0.4); /* #232B73 at 40% opacity */
+
+        }
+
+    </style>
+
+</head>
+
+<body class="bg-brand-white font-sans text-brand-blue scroll-smooth">
+
+    <!-- Scroll target for the 'Shop Now' button -->
+
+    <div id="shop-section"></div>
+
+    <!-- 1. Header and Hero Section -->
+
+    <header class="hero-background min-h-screen pt-4 pb-20 md:pb-0">
+
+        <div class="hero-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            
+
+            <!-- Navigation Bar (Logo added and name updated) -->
+
+            <nav class="flex justify-between items-center py-4 text-brand-white">
+
+                <div class="flex items-center gap-2">
+
+                    <img src="https://i.imgur.com/SgvZifL.png" 
+
+                         alt="Logo" 
+
+                         class="w-8 h-8 object-contain">
+
+                    <div class="text-1xl font-extrabold tracking-tight">UGOWAYS SPORTS</div>
+
+                </div>
+
+                <div class="hidden md:flex space-x-8 text-lg font-medium">
+
+                    <a href="#" class="hover:text-brand-blue transition duration-300">About us.</a>
+
+                    <a href="#" class="hover:text-brand-blue transition duration-300">Sale.</a>
+
+                    <a href="#category-section" class="hover:text-brand-blue transition duration-300">Collection</a>
+
+                    <a href="#" class="hover:text-brand-blue transition duration-300">Blog</a>
+
+                </div>
+
+                <button class="md:hidden p-2">
+
+                    <!-- Hamburger Icon (lucide-react fallback using SVG) -->
+
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+
+                </button>
+
+            </nav>
+
+            <!-- Hero Content Grid -->
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[70vh]">
+
+                
+
+                <!-- Text Content (Left Side) - Text updated -->
+
+                <div class="text-brand-white">
+
+                    <p class="text-xl font-semibold tracking-widest mb-4"></p>
+
+                    <h1 class="text-5xl sm:text-7xl lg:text-8xl font-black leading-tight mb-6 uppercase">
+
+                      BIGGEST SPORTING GIANT.
+
+                    </h1>
+
+                    <h2 class="text-2xl sm:text-3xl font-light mb-8 uppercase">
+
+                        UGOWAYS <span class="text-brand-blue font-bold bg-brand-white/90 p-1 rounded">SPORTS</span>
+
+                    </h2>
+                   
+                  </h2>
+
+<p class="text-lg mb-8 font-medium">Biggest • Best • Affordable • Integrity</p>
+
+<div class="mb-8">
+    <p class="text-white text-base leading-relaxed">
+        Sport retail outlet in all kinds of Sports Equipments, Wears,
+        Fashion and Accessories.
+    </p>
+    <p class="text-white text-sm mt-2">
+        G95C+82R, Tejuosho Ave, Yaba, 101241 Shop F38, F39, Tejuosho
+        Shopping Mall, Yaba Phase 2, Lagos, Nigeria
+    </p>
+</div>
+
+                    <!-- Shop Now Button -->
+
+                        <a href="#category-section"
+   class="inline-block px-10 py-4 text-lg font-bold uppercase rounded-xl
+          border-2 #FFFFFF bg-transparent text-#FFFFFF
+          shadow hover:#FFFFFF/10 hover:scale-105 transform transition duration-300
+          focus:outline-none focus-visible:ring-4 focus-visible:#FFFFFF/25"
+>
+  Shop Now
+</a>
+
+                         
+
+                    </a>
+
+                </div>
+
+                <!-- Image (Right Side) - Athlete with soccer ball image -->
+
+                      <!-- Image + Action Text -->
+
+<div class="relative flex justify-center md:justify-end mt-10 md:mt-0 w-full">
+
+    <!-- BE (top-left, slanted) -->
+
+    <div class="absolute top-4 left-4 text-white text-5xl font-extrabold -rotate-12 drop-shadow-[0_8px_15px_rgba(0,0,0,0.9)]">
+
+        BE
+
+    </div>
+
+    <!-- Image -->
+
+    <img
+
+        src="https://i.imgur.com/eovlZnP.png"
+
+        onerror="this.onerror=null;this.src='https://placehold.co/400x550/232B73/FFFFFF?text=Main+Image+Fallback'"
+
+        alt="Athlete"
+
+        class="w-[260px] sm:w-[320px] md:w-[400px] lg:w-[520px] object-contain"
+
+    />
+
+    <!-- PROACTIVE (bottom-right, slanted) -->
+
+    <div class="absolute bottom-4 right-4 text-white text-5xl font-extrabold rotate-6 drop-shadow-[0_8px_15px_rgba(0,0,0,0.9)]">
+
+        PROACTIVE!
+
+    </div>
+
+</div>
+                        
+
+                    
+                
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- 2. Category and New Arrivals Section -->
+
+    <section id="category-section" class="py-20 bg-brand-white">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <h3 class="text-sm font-semibold uppercase tracking-widest text-gray-500 mb-2">NEW ARRIVALS.</h3>
+
+            <div class="flex justify-between items-center mb-10">
+
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-brand-blue">
+
+                    TRAINERS. <span class="text-black">- BOOTS</span>
+
+                </h2>
+
+                <a href="#collection" class="text-lg font-bold text-brand-blue hover:text-black transition duration-300">
+
+                    Shop Collection &rarr;
+
+                </a>
+
+            </div>
+
+            <!-- Category Grid (3 Squares) -->
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Helper function to avoid repetition (DRY Principle) -->
+
+                <script>
+
+                    function createCategoryCard(imageUrl, title, subtitle) {
+
+                        return `
+
+                        <div class="relative overflow-hidden rounded-2xl h-96 translucent-blue-bg group cursor-pointer shadow-xl">
+
+                            <!-- Image with object-cover for scaling -->
+
+                            <img
+
+                                src="${imageUrl}"
+
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x600/232B73/FFFFFF?text=Image+Load+Error'"
+
+                                alt="${title} category image"
+
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500 group-hover:scale-105"
+
+                            >
+
+                            <!-- Text Overlay -->
+
+                            <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/80 to-transparent">
+
+                                <p class="text-sm font-light text-brand-white uppercase">${subtitle}</p>
+
+                                <h4 class="text-3xl font-bold text-brand-white uppercase leading-tight">${title}</h4>
+
+                            </div>
+
+                        </div>
+
+                        `;
+
+                    }
+
+                </script>
+
+                <!-- Square 1: Image 1 -->
+
+                <div id="card1"></div>
+
+                <!-- Square 2: Image 2 -->
+
+                <div id="card2"></div>
+
+                <!-- Square 3: Image 3 -->
+
+                <div id="card3"></div>
+
+ 
+   
+
+        </div>
+
+    </section>
+
+    <!-- 3. Features / USP Section -->
+
+    <section id="features" class="py-20 bg-gray-50">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <h2 class="text-3xl font-extrabold text-center text-brand-blue mb-16">
+
+                OUR COMMITMENT
+
+            </h2>
+
+            <!-- Features Grid (2x2 layout on desktop) -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+                <!-- Feature 1: LARGEST SPORTS DEALER INTER-STATE -->
+
+                <div class="p-6 rounded-xl bg-brand-white shadow-lg border-t-4 border-brand-blue hover:shadow-2xl transition duration-300">
+
+                    <h3 class="text-lg font-semibold uppercase tracking-widest mb-3 text-gray-500"></h3>
+
+                    <h4 class="text-2xl font-bold text-brand-blue mb-4">LARGEST SPORTS DEALER INTER-STATE</h4>
+
+                    <p class="text-gray-600">
+
+                        Dealers in all kinds of sports equipment, boots, jerseys, gear, trophies and more! We are the best and most broad, providing you with everything you need to <span class="font-bold">BE PROACTIVE!</span>
+
+                    </p>
+
+                </div>
+</div>
+
+          
+<!-- Feature 2: LATEST, LONG LASTING, ON-TIME -->
+<div class="p-6 rounded-xl bg-brand-white shadow-lg border-t-4 border-brand-blue hover:shadow-2xl transition duration-300">
+
+    <h3 class="text-lg font-semibold uppercase tracking-widest mb-3 text-gray-500"></h3>
+
+    <h4 class="text-2xl font-bold text-brand-blue mb-4">LATEST, LONG LASTING, ON-TIME</h4>
+
+    <p class="text-gray-600">
+        - We pride ourselves in service, quality and trends giving not just the latest but smartest, durable & efficient products supplied by demand and built to last. At UGO-WAYS durability & speed delivering is nothing to worry about.
+    </p>
+
+</div>
+<!-- End Feature 2 -->
+
+<!-- Feature 3: AFFORDABILITY -->
+        
+          <div>
+            <div>
+          
+                <div class="p-6 rounded-xl bg-brand-white shadow-lg border-t-4 border-brand-blue hover:shadow-2xl transition duration-300">
+
+                    <h3 class="text-lg font-semibold uppercase tracking-widest mb-3 text-gray-500"></h3>
+
+                    <h4 class="text-2xl font-bold text-brand-blue mb-4">AFFORDABILITY</h4>
+
+                    <p class="text-gray-600">
+
+                        <span class="text-sm font-semibold uppercase text-brand-blue"></span> - Products are not over-priced or under-priced, but you get the quality in its best and affordable prices. In the years past UGO-WAYS has always been known with affordability followed with quality and authenticity.
+
+                    </p>
+
+                </div>
+
+                <!-- Feature 4: VERSATILITY -->
+
+              <div class="p-6 rounded-xl bg-brand-white shadow-lg border-t-4 border-brand-blue hover:shadow-2xl transition duration-300">
+
+                    <h3 class="text-lg font-semibold uppercase tracking-widest mb-3 text-gray-500"></h3>
+
+                    <h4 class="text-2xl font-bold text-brand-blue mb-4">VERSATILITY</h4>
+
+                    <p class="text-gray-600">
+
+                        <span class="text-sm font-semibold uppercase text-brand-blue"></span> - We understand that life is made by choices and preferences, so we are providing you with a vast majority of choices and options based on your agility, foot size, body weight and so much more!
+
+                    </p>
+                
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+   <div class="mt-12 text-center">
+
+                <h3 class="text-3xl font-bold text-brand-blue mb-4">HOT SALE.</h3>
+
+                <p class="text-xl text-gray-700">Explore our limited-time deals on the newest gear.</p>
+
+            </div>
+  <section class="w-full px-6 md:px-12 lg:px-20 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="relative w-full h-[380px] bg-gray-200 rounded-xl overflow-hidden shadow-md">
+            <img src="https://i.imgur.com/pwtgxit.png" 
+                 class="absolute inset-0 w-full h-full object-cover" alt="placeholder" />
+          
+
+            <div class="absolute bottom-6 left-6">
+                <h2 class="text-2xl font-bold tracking-wide">BOOTS & GEAR<span class="text-#FFFFFF-600">.</span></h2>
+                <div class="w-16 h-[3px] bg-red-600 mt-2 mb-3"></div>
+                <a href="#" class="text-sm font-medium tracking-wide">Shop Collection →</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="relative w-full h-[380px] bg-gray-200 rounded-xl overflow-hidden shadow-md">
+            <img src="https://i.imgur.com/vhjcktF.png" 
+                 class="absolute inset-0 w-full h-full object-cover" alt="placeholder" />
+
+            <div class="absolute bottom-6 left-6">
+                <h2 class="text-2xl font-bold tracking-wide">SOCCER JERSEYS<span class="text-red-600">.</span></h2>
+                <div class="w-16 h-[3px] bg-red-600 mt-2 mb-3"></div>
+                <a href="#" class="text-sm font-medium tracking-wide">Shop Collection →</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="relative w-full h-[380px] bg-gray-200 rounded-xl overflow-hidden shadow-md">
+            <img src="https://i.imgur.com/iWCw5iQ.png" 
+                 class="absolute inset-0 w-full h-full object-cover" alt="placeholder" />
+
+            <div class="absolute bottom-6 left-6">
+                <h2 class="text-2xl font-bold tracking-wide">EQUIPMENTS KITS<span class="text-red-600">.</span></h2>
+                <div class="w-16 h-[3px] bg-red-600 mt-2 mb-3"></div>
+                <a href="#" class="text-sm font-medium tracking-wide">Shop Collection →</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footwears Banner</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the specific blue color (#232B73) with 0.8 opacity using rgba */
+        .custom-blue-bg {
+            /* Color #232B73 with 80% opacity: rgba(R, G, B, 0.8) */
+            background-color: rgba(35, 43, 115, 0.8); 
+        }
+
+        /* Ensure the body takes up the full viewport height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* * Styling for the image:
+         * - object-fit: contain ensures the image scales to fit the container without cropping (cutting).
+         */
+        .product-image {
+            object-fit: contain; 
+            max-width: 100%; 
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- 
+        Main container: 
+        1. Applies the required opaque blue background using custom-blue-bg.
+        2. min-h-screen and w-full ensures the background is larger than the content.
+        3. Flex layout centers all content.
+    -->
+    <div class="custom-blue-bg min-h-screen w-full flex flex-col items-center justify-center p-6">
+
+        <!-- Heading: White, Bold, Large Text -->
+        <h1 class="text-white text-5xl sm:text-6xl font-extrabold tracking-tight mb-8 text-center uppercase">
+            FOOTWEARS
+        </h1>
+
+        <!-- Image Element: USING THE EXACT DROPBOX URL PROVIDED -->
+        <img 
+            src="https://www.dropbox.com/scl/fi/32n19re6rv7rpkk8nbq4i/1764170219140.png?rlkey=v0d2pdl8a37ea5ul1x5gprw83&st=bim7jkpn&dl=1"
+            alt="Footwears Product Image"
+            class="product-image"
+        />
+
+    </div>
+
+</body>
+</html>      
+  
+    <!-- End of outer div -->  <!-- BOOTS ACCESSORIES Section -->  <section class="bg-white py-12">  
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  <!-- Section Heading -->  
+
+    <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>  
+
+    <!-- Product Container -->  
+
+    <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">  
+
+        <!-- Product Image Carousel -->  
+
+        <div class="overflow-x-auto flex gap-4 scrollbar-hide">  
+
+            <img src="https://i.imgur.com/nfNJeIS.png" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">  
+
+            <img src="https://www.bootsplug.com/cdn/shop/files/BFBDA1A4-EDAE-412A-BB25-8E6F7CD56372_1024x1024.jpg?v=1711271771" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">  
+
+            <img src="https://www.bootsplug.com/cdn/shop/files/B5B0598E-BCE3-42ED-B189-B4AB1E97D7AF_1024x1024.jpg?v=1711271771" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">  
+
+        </div>  
+
+        <!-- Product Description -->  
+
+        <div>  
+
+            <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>  
+
+            <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>  
+
+        </div>  
+
+        <!-- CTA Button -->  
+
+        <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">  
+
+            Order Now  
+
+        </a>  
+
+    </div>  
+
+
+
+</div> <!-- End of outer div -->  <!-- BOOTS ACCESSORIES Section -->  <section class="bg-white py-12">  
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">  <!-- Section Heading -->  
+
+    <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>  
+
+    <!-- Product Container -->  
+
+    <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">  
+
+        <!-- Product Image Carousel -->  
+
+        <div class="overflow-x-auto flex gap-4 scrollbar-hide">  
+
+            <img src="https://i.imgur.com/hn3jl4E.jpeg" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">  
+
+            <img src="https://thumblr.uniid.it/product/266611/d173642a4ead.jpg" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">  
+
+            <img src="https://thumblr.uniid.it/product/266611/8944393428c3.jpg" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">  
+
+        </div>  
+
+        <!-- Product Description -->  
+
+        <div>  
+
+            <h3 class="text-2xl font-bold text-[#232B73]">Nike Air Zoom Mercurial Superfly Elite 9 SG-PRO PLAYER EDITION </h3>  
+
+            <p class="text-gray-700 mt-2">Blast - White/Baltic Blue/Pink Blast/Indigo Haze</p>  
+
+        </div>  
+
+        <!-- CTA Button -->  
+
+        <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">  
+
+            Order Now  
+
+        </a>  
+
+    </div>  
+
+</div>
+
+</section>
+</div> 
+      
+      <!-- End of outer div -->
+
+<!-- BOOTS ACCESSORIES Section -->
+
+<section class="bg-white py-12">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+
+        <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>
+
+        <!-- Product Container -->
+
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+            <!-- Product Image Carousel -->
+
+            <div class="overflow-x-auto flex gap-4 scrollbar-hide">
+
+                <img src="https://i.imgur.com/EklSwy3.jpeg" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+                <img src="https://i.imgur.com/pfZobCq.jpg" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+                <img src="https://i.imgur.com/ZyKvMUx.jpg" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+            </div>
+
+            <!-- Product Description -->
+
+            <div>
+
+                <h3 class="text-2xl font-bold text-[#232B73]">Predator Elite Fold-Over Tongue Artificial Grass Boots</h3>
+
+                <p class="text-gray-700 mt-2">Lucid Red / Cloud White / Core Black</p>
+
+            </div>
+
+            <!-- CTA Button -->
+
+            <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+
+                Order Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+</div> <!-- End of outer div -->
+
+<!-- BOOTS ACCESSORIES Section -->
+
+<section class="bg-white py-12">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+
+        <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>
+
+        <!-- Product Container -->
+
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+            <!-- Product Image Carousel -->
+
+            <div class="overflow-x-auto flex gap-4 scrollbar-hide">
+
+                <img src="https://thumblr.uniid.it/product/396344/5a4970177808.jpg?width=750&format=webp&q=75" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+                <img src="https://thumblr.uniid.it/product/396344/edbca185fcfc.jpg?width=750&format=webp&q=75" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+                <img src="https://thumblr.uniid.it/product/396344/7ebe35d4b43d.jpg?width=750&format=webp&q=75" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+            </div>
+
+            <!-- Product Description -->
+
+            <div>
+
+                <h3 class="text-2xl font-bold text-[#232B73]">adidas Predator Elite Laceless FG Coral Blaze - Signal Coral/Footwear</h3>
+
+                <p class="text-gray-700 mt-2">White/Beam Orange</p>
+
+            </div>
+
+            <!-- CTA Button -->
+
+            <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+
+                Order Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+</div> <!-- End of outer div -->
+
+<!-- BOOTS ACCESSORIES Section -->
+
+<section class="bg-white py-12">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+
+        <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>
+
+        <!-- Product Container -->
+
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+            <!-- Product Image Carousel -->
+
+            <div class="overflow-x-auto flex gap-4 scrollbar-hide">
+
+                <img src="https://thumblr.uniid.it/product/223878/97f74003a6ea.jpg?width=750&format=webp&q=75" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+                <img src="https://thumblr.uniid.it/product/223878/1c7d9ca2d0dd.jpg?width=750&format=webp&q=75" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+                <img src="https://thumblr.uniid.it/product/223878/0b016d06d9dc.jpg?width=750&format=webp&q=75" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+            </div>
+
+            <!-- Product Description -->
+
+            <div>
+
+                <h3 class="text-2xl font-bold text-[#232B73]">PUMA Ultra 2.3 FG/AG Faster Football</h3>
+
+                <p class="text-gray-700 mt-2">Sunblaze/PUMA White</p>
+
+            </div>
+
+            <!-- CTA Button -->
+
+            <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+
+                Order Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+</div> <!-- End of outer div -->
+
+<!-- BOOTS ACCESSORIES Section -->
+
+<section class="bg-white py-12">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+
+        <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>
+
+        <!-- Product Container -->
+
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+            <!-- Product Image Carousel -->
+
+            <div class="overflow-x-auto flex gap-4 scrollbar-hide">
+
+                <img src="https://thumblr.uniid.it/product/380001/2aae39bc4c20.jpg" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+                <img src="https://thumblr.uniid.it/product/380001/47b7932545ca.jpg" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+                <img src="https://thumblr.uniid.it/product/380001/e4e5f23dc42a.jpg" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+
+            </div>
+
+            <!-- Product Description -->
+
+            <div>
+
+                <h3 class="text-2xl font-bold text-[#232B73]">PUMA Future 8 Pro FG/AG Unlimited - PUMA</h3>
+
+                <p class="text-gray-700 mt-2">Black/PUMA White/Glowing Red</p>
+
+            </div>
+
+            <!-- CTA Button -->
+
+            <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+
+                Order Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+</div> <!-- End of outer div -->
+
+<!-- BOOTS ACCESSORIES Section -->
+<section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>
+
+        <!-- Product Container -->
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+            <!-- Product Image Carousel -->
+            <div class="overflow-x-auto flex gap-4 scrollbar-hide">
+                <img src="https://thumblr.uniid.it/product/161513/6913385d9043.jpg" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+                <img src="https://thumblr.uniid.it/product/161513/e5de4d6755ab.jpg" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+                <img src="https://thumblr.uniid.it/product/161513/0b75f0b26d76.jpg" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+            </div>
+
+            <!-- Product Description -->
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">adidas Nemeziz 17+ 360Agility FG/AG Thunder Storm </h3>
+                <p class="text-gray-700 mt-2">Core Black/Energy Blue</p>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+
+        </div>
+    </div>
+</section>
+
+</div> <!-- End of outer div -->
+
+<!-- BOOTS ACCESSORIES Section -->
+<section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>
+
+        <!-- Product Container -->
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+            <!-- Product Image Carousel -->
+            <div class="overflow-x-auto flex gap-4 scrollbar-hide">
+                <img src="https://thumblr.uniid.it/product/250682/cfbd8de4fe4f.jpg" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+                <img src="https://thumblr.uniid.it/product/250682/5467d436415f.jpg" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+                <img src="https://thumblr.uniid.it/product/250682/4cecf2ad59e6.jpg" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+            </div>
+
+            <!-- Product Description -->
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">adidas X Speedportal .2 FG Al Rihla</h3>
+                <p class="text-gray-700 mt-2">Clear Aqua/Solar Red/Power Blue</p>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+
+        </div>
+    </div>
+</section>
+
+</div> <!-- End of outer div -->
+
+<!-- BOOTS ACCESSORIES Section -->
+<section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Heading -->
+        <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>
+
+        <!-- Product Container -->
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+            <!-- Product Image Carousel -->
+            <div class="overflow-x-auto flex gap-4 scrollbar-hide">
+                <img src="https://thumblr.uniid.it/product/392878/6acaa8e86ef2.jpg" alt="Main Product" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+                <img src="https://thumblr.uniid.it/product/392878/7873b31ab369.jpg" alt="Product 2" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+                <img src="https://thumblr.uniid.it/product/392878/12a0cf5871b1.jpg" alt="Product 3" class="w-64 h-64 object-cover flex-shrink-0 rounded-xl">
+            </div>
+
+            <!-- Product Description -->
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom 6 Elite Low Cut AG-PRO</h3>
+                <p class="text-gray-700 mt-2">Turquoise/Chrome/Black LIMITED EDITION</p>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://wa.me/2348033063421" class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+</div> <!-- End of outer div -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerseys Banner</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the specific blue color (#232B73) with 0.8 opacity using rgba */
+        .custom-blue-bg {
+    /* New Gradient: From Top (Blue with 0.8 opacity) to Bottom (Solid White) */
+    background-image: linear-gradient(
+        to bottom, 
+        rgba(35, 43, 115, 0.8), /* Starts with your brand blue at 80% opacity */
+        #FFFFFF                 /* Ends with solid white */
+    ); 
+    min-height: 80vh;
+}
+
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* * Image Sizing for Maximum Contained Fit
+         * Increased size and containment adjusted for new container size.
+         */
+        .product-image-Xlarge {
+            object-fit: expand; 
+            max-width: 100%;     /* Removed max-width constraint */
+            width: 220%;         /* ADJUSTED: Increased width slightly beyond container */
+            height: auto;
+            max-height: 180vh;   /* Constrained by viewport height to keep it contained in the smaller section */
+        }
+        
+        /* Reset header container styling for flexbox centering */
+        .header-container {
+            z-index: 10; 
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Container uses flexbox to center content horizontally and vertically -->
+    <div class="custom-blue-bg w-full p-6 overflow-hidden flex flex-col items-center justify-center">
+
+        <!-- Heading: JERSEYS (Changed text back to plural) -->
+        <div class="header-container">
+            <h1 class="text-white text-5xl sm:text-6xl font-extrabold tracking-tight mb-8 text-center uppercase">
+                JERSEYS
+            </h1>
+        </div>
+
+        <!-- Image Element: Contained and centered -->
+        <!-- The image is wrapped in a dedicated div to help the 100% height calculation -->
+        <div class="w-full flex justify-center items-center flex-grow">
+            <img 
+                src="https://www.dropbox.com/scl/fi/fcxzb0iuypvzjs3wggdek/1764227445707.png?rlkey=xk8h1oktjcnnck64fwufhbz8y&st=1uqi5agr&dl=1"
+                alt="Jerseys Product Image"
+                class="product-image-XXXlarge"
+            />
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+<!-- BOOTS ACCESSORIES Section -->
+<section class="bg-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    
+        
+
+        
+         
+                <!-- Section Heading -->
+        <h2 class="text-3xl font-bold text-[#232B73] mb-8 text-center"></h2>
+
+       <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://i.imgur.com/HYZ5x3v.png" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+
+
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/4hbooezufkv9u3w99jr7w/IMG-20251122-WA0171.png?rlkey=pnclmijpk8xmqxkexrtu2g3db&st=mrb6veym&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+
+
+  <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/4n6lhi0h7tfak6b0zcpg4/IMG-20251122-WA0169.png?rlkey=oxi72me1jd8xm3t7c5rltrctk&st=bho6etzu&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+
+<!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/jtg13nb9bwdo200t8vtom/IMG-20251122-WA0163.png?rlkey=a0xqw5jm93qcz1sirgio6cs62&st=k142ta2o&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+      <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/559y63gj6iqznnamjg3th/IMG-20251122-WA0165.png?rlkey=5ufw4pneumj44otybaunbldfq&st=uo44y8xz&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+      <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/erutfa8pi44pwn28s24sc/IMG-20251122-WA0170.png?rlkey=vbza1gz8fa91xpckcs74zrhr9&st=qw3a5u7x&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+      <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/1x9vgvx66x5w8jotq5y6n/IMG-20251122-WA0166.png?rlkey=7j1jfi8qqtfktxqpocffuluxg&st=ns375ddm&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+      <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/gtc9xqfeeg278fioytp2s/IMG-20251122-WA0156.png?rlkey=p3nsyi4nfgd1a44whv3riwe2e&st=slkixc20&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+      <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/hjoybggtilw24xwnijifd/IMG-20251122-WA0084.png?rlkey=8fw7jov5ge1aj8ra7m0t29c96&st=4cbpo8wx&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/egfy5nzv0ev347rvg36n3/IMG-20251122-WA0085-1.png?rlkey=bceu413ghc14ml7hpmtrj54t5&st=re233wf4&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/d6nfjngnztr15mjskll35/IMG-20251122-WA0140-1.png?rlkey=ubp7rgco0mow92yg2qie15kaa&st=xy0koyog&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+      
+     <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/9vjs20ggh6zi2xpzzk6yb/IMG-20251122-WA0141.png?rlkey=ki3yrv9iyq1832173emcxzdt3&st=rn5sg8a8&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/3oukxjh1up8n0yqvjzbmx/IMG-20251122-WA0090.png?rlkey=zb7n5fp0fic8vu7tev85kdya6&st=rf985a27&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/tv21blj6b2e351lefu4fn/IMG-20251122-WWA0088A0088.png?rlkey=t022sd3htg533tiy3ebv3rid8&st=jsiiaa8y&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/8ti3hwfm57479bu04lby2/IMG-20251122-WA0078.jpg?rlkey=ka8d50jku3dhmhqx25n7x1wwv&st=6osib6rk&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/hk2l9pax3ugqp0k0iheq9/IMG-20251122-WA0077.png?rlkey=7m6xh6m2tff6ufgdcu88uet34&st=83ybscck&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+      <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/7560558dzfqfw4ohf55wa/IMG-20251122-WA0073.jpg?rlkey=pyd5thtwdlc6x9gau1g33lo1h&st=8xrn3s1d&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/n1mixyz0xsayhqiel2pg8/IMG-20251122-WA0106.png?rlkey=rt6fbca75dypbnc5t8eh0dnz3&st=8v0txs9d&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/t7h5rilr3541jpk9av8xe/IMG-20251122-WA0153.png?rlkey=aiw1yko8qrzraiee11rvo2tll&st=ygm8rjuv&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+       <!-- Product Container -->
+<div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+
+    <div class="flex justify-center">
+        <img src="https://www.dropbox.com/scl/fi/bcc9cwtwnu19ekcw955ia/IMG-20251122-WA0154.png?rlkey=74s5l6l43rr226lsb1p9t4mg5&st=20t8ct0w&dl=1" 
+             alt="Main Product" 
+             class="w-48 h-48 object-cover rounded-xl">
+    </div>
+    
+    <div>
+        <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+        <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+    </div>
+
+    <a href="https://wa.me/2348033063421" 
+       class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+        Order Now
+    </a>
+
+</div>
+      
+    
+.
+<section class="py-10">
+    <h2 class="text-4xl font-extrabold text-[#232B73] text-center mb-10">SPORT BALLS</h2>
+    
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 px-4">
+        
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/yk7wiijgbmcar32pjcgbk/IMG-20251123-WA0029-1.png?rlkey=zvt0dwpwjqpinyq8jml3c4jcv&st=pgpkjzyd&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/l9rfxvxatupgatajw3kpw/IMG-20251123-WA0011.png?rlkey=qz5v674620mi4gql0l3hq5tgf&st=c2zqttq5&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/9sj4kxqha06cmu0z9ur3p/IMG-20251123-WA0012.png?rlkey=kjmjshcs9esq6v5e8q9rmtv6x&st=moml8tlo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/infhxmi3drxxev419yh6v/IMG-20251123-WA0032.png?rlkey=ejzeq809t28mo5bd3dxtw5n69&st=727yika9&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/q9xlik7u3bj8hhkr6g0in/IMG-20251123-WA0033.png?rlkey=m3b69m3dopak59xqhe6t6h8yc&st=4exhfpcc&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/2361w9iam8he42amlld9x/IMG-20251123-WA0035.png?rlkey=r7e0rei4k6bavwg4q0r2wxs0w&st=nogunnh8&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/30y0ar0y9idtklem3fmak/KAZU-FOOTBALL1.png?rlkey=0re8opttgkk6phnt11kki4c2n&st=j728sio8&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/h621fztd58evmbqibya9l/4fb270a4bfa704588a65d58beeb3bb47.jpg?rlkey=iplrqnj2bz12ua9d4m609ozfj&st=4kymi0hb&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/2x6hgiu4cjn1f14gmmh5t/c1ff14c4661b784a3d1fba4595d41d8e.png?rlkey=ropxr0xavr03m6wo2sw9u19ez&st=8uohkaje&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/0qn8sx659ok2rtgsdsq5g/354e8092171313fa8e78bfea67862a24.png?rlkey=z98e6ch6r7fb4fc8gfep3p9f2&st=ppg9irdu&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/l9rfxvxatupgatajw3kpw/IMG-20251123-WA0011.png?rlkey=qz5v674620mi4gql0l3hq5tgf&st=y28vzrxd&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/0qn8sx659ok2rtgsdsq5g/354e8092171313fa8e78bfea67862a24.png?rlkey=z98e6ch6r7fb4fc8gfep3p9f2&st=ppg9irdu&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/1thlgz8rftztci75fza45/ddafd130efb337801dc2da3e570a18b0.png?rlkey=sam56oopahwyob5keo8adohax&st=iya62oal&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE 1</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracksuits Banner</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the specific blue color (#232B73) with 0.8 opacity using rgba */
+        .custom-blue-bg {
+            /* Color #232B73 with 80% opacity: rgba(R, G, B, 0.8) */
+            background-color: rgba(35, 43, 115, 0.8); 
+            min-height: 140vh; /* Ensures the section is large enough */
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Image Sizing and Containment Settings (INCREASED SIZE HERE) */
+        .product-image-large {
+            object-fit: contain; /* Ensures the image isn't cut */
+            max-width: 100%; /* Increased max-width */
+            width: auto;     
+            height: 110vh;  /* Increased height to 110% of screen height */
+            margin-top: 5vh; /* Keep it centered/contained */
+        }
+        
+        /* Ensure heading is above the image if needed, using z-index */
+        .header-container {
+            z-index: 10; 
+            position: relative;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- Container updated to use the custom-blue-bg class with the increased min-height -->
+    <div class="custom-blue-bg w-full flex flex-col items-center justify-center p-6 relative overflow-hidden">
+
+        <!-- Heading: Updated to TRACKSUITS -->
+        <div class="header-container">
+            <h1 class="text-white text-5xl sm:text-6xl font-extrabold tracking-tight mb-8 text-center uppercase">
+                TRACKSUITS
+            </h1>
+        </div>
+
+        <!-- Image Element: Uses the previously provided Dropbox URL -->
+        <img
+    src="https://www.dropbox.com/scl/fi/cmnqmtrdnjmwzqfzf2avp/1764228860680.png?rlkey=sq14ucxn0lto15fw0fomo15tt&st=5s2jeptk&dl=1"
+    alt="Tracksuits Product Image"
+    style="width:600px; height:auto;"
+/>
+
+    </div>
+
+</body>
+</html>
+
+
+      <section class="py-10">
+    <h2 class="text-4xl font-extrabold text-[#232B73] text-center mb-10"></h2>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/50k7yo0kitsb0b85f8xkz/IMG_20251123_180210.png?rlkey=yvoocb9b7tn18knz0vxtnzzca&st=s4xur43q&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/emfcn1o0489dzcwy6l8tw/5450b7822fc7063b6686ac526ec00ac3.jpg?rlkey=m4msg7yt1ydn3eagw1bht0dbw&st=hwhsi5pd&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/a6bkxkyozdfh2o188gbk8/1000294276_imgupscaler.ai_Beta_4K.png?rlkey=ssxccj97d9a0w3g2cg1419ui5&st=yccupb0g&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/dgluiel1sg0e60tbtqcv9/253f9c7e6787527a6e590dc9a1bac8c9.jpg?rlkey=wz4gf5kmdo6l5rjvqfmz70ix2&st=gtk7zipd&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/8zj3jdhhhcbjnjof6nrij/Screenshot_2025-11-24-10-59-39-970_com.android.chrome.jpg?rlkey=0dze79oub6kd1bnn9o9ig03u5&st=v609ynrj&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/c96dnfi6c92jyxvn3mfk5/91ede1825222b21513d78fecdcf030ce.jpg?rlkey=zo6pq1tfh7k0cnrhrcur40jp7&st=c74njs5s&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/t31qq1jo288u89lo8hzrg/d6355ccda0ecfa2880bbc91de9050601.jpg?rlkey=qooc71rqi0noc0y0sxyasdo27&st=ezrchzo1&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essentials Banner</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Define the specific blue color (#232B73) with 0.8 opacity using rgba */
+        .custom-blue-bg {
+            /* Color #232B73 with 80% opacity: rgba(R, G, B, 0.8) */
+            background-color: rgba(35, 43, 115, 0.8); 
+        }
+
+        /* Ensure the body takes up the full viewport height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* * Styling for the image:
+         * - object-fit: contain ensures the image scales to fit the container without cropping (cutting).
+         */
+        .product-image {
+            object-fit: contain; 
+            max-width: 100%; 
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <!-- 
+        Main container: 
+        1. Applies the required opaque blue background using custom-blue-bg.
+        2. min-h-screen and w-full ensures the background is larger than the content.
+        3. Flex layout centers all content.
+    -->
+    <div class="custom-blue-bg min-h-screen w-full flex flex-col items-center justify-center p-6">
+
+        <!-- Heading: White, Bold, Large Text -->
+        <h1 class="text-white text-5xl sm:text-6xl font-extrabold tracking-tight mb-8 text-center uppercase">
+            ESSENTIALS
+        </h1>
+
+        <!-- Image Element: Direct display of the PNG using the requested link -->
+        <img 
+            src="https://www.dropbox.com/scl/fi/266wq63ovn82492yf7ci6/0fbce1976507da4a0c313318be79b290-1.png?rlkey=am9xjjvcklf116phgziaed1p9&st=enkac0cn&dl=1"
+            alt="Essentials Product Image"
+            class="product-image"
+        />
+
+    </div>
+
+</body>
+</html>
+
+
+<section class="py-10">
+    <h2 class="text-4xl font-extrabold text-[#232B73] text-center mb-10"></h2>
+          
+  </a>
+     </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/kbm2s4vv1aeiolmcseydi/IMG-20251123-WA0019.jpg?rlkey=837k9h9bpmvc215cfui9tbnh9&st=x5zol4fy&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+    </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/b3ahes8w9grradd6ckajj/IMG-20251123-WA0017.jpg?rlkey=y2dt4qrano0ecs3oqwhkcku4s&st=znptl5bu&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/pon6zebpezs3kjvisjsrq/IMG-20251123-WA0014.jpg?rlkey=ydza13p8myq6ac8itbrgm9trs&st=p185lnfl&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/v7yscu75ftwyamc71y936/IMG-20251123-WA0016.jpg?rlkey=f3agcav03lp4cfstsiwfr624e&st=er1gu4qg&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/pbpnash9lfa0fe7zr13yk/IMG-20251123-WA0026.jpg?rlkey=k55c3ekgt0w5xguwlms9o3uw3&st=z3x1duk4&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/x73uk8t0u7i0cmslss0q6/IMG-20251123-WA0015.png?rlkey=hee5x3w2dxex5r9vkovok9eqs&st=jsru2pgb&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/ymg94918yk9xfllhz62vf/3d34b99b6ba7f3a4ffbd30711c2b46ea.jpg?rlkey=25azxeevywt7pmy6spcejfm84&st=zv6xfn1g&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/0j2yix9iqlblvkpqo9g1w/8cc53e51e2aec85504e06e6e69f6fd67.png?rlkey=dflpsv28fxzaye171kk43lcxd&st=cx63si4v&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/oxwuj4d0ohjelk3hvf3fc/5e264a0b15742200c448642be5127285.jpg?rlkey=nvrp3g0ev69uvxr1snjcvvubw&st=kxvl7drp&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/zqpuprbc6aas9d4brhqlj/b2c8c988b5479818b5865f45f6add3b3.jpg?rlkey=2s7jjqmql9cv0bvjnbzkbdqj2&st=9s73q0h0&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/ffdbjgwr50aipqio0r8xk/e2f164079af01727349172139cb6a9ed.jpg?rlkey=xa35inp0wgx3ri3q2kimg6eq4&st=mylghyxa&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/t31qq1jo288u89lo8hzrg/d6355ccda0ecfa2880bbc91de9050601.jpg?rlkey=qooc71rqi0noc0y0sxyasdo27&st=ezrchzo1&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/ilo5jbjkeygchteag99tq/d558c747e7c5909ce1f2f3271d829342.jpg?rlkey=3fwhqwu454bgddkx3nj8jqoco&st=81mjwhlu&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/uzrl42olnpcja54ytcae5/7ed04457743d6507f30f78d2a33e59b2.jpg?rlkey=1qypgaoek46z9m4013kja8n30&st=534ui4yp&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/094o9d4j4d8hucrm8m6sn/98c03142c052a2a318f4f8b4b00308d9.jpg?rlkey=oe1z2rursk1arupuliryw0xn7&st=7s85q8wv&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/8znc2wu1wrudzkgzt7hyd/de9deb4bee880672dcc99135e045f351.jpg?rlkey=lxzl66tkz4g3bj3af94gx750a&st=kzfclq0z&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast2</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/s7igdkowsgdr7cyq80uxi/a76281dd39ceceeb1796e5cc9eec9301.png?rlkey=vg907v19dssmfqqljlwknqx8j&st=vb8cffng&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/78q4rrg5zl2xvinbfkb2p/fe1cbc46457480f15c1d57670817aa10.jpg?rlkey=p0zrxpt0v9knphwly5zt44wul&st=wz2lx4ks&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/t905manaey3nxgtazlaky/52205aa571ca5b71eb5df3f3f3b20b2984.jpg?rlkey=w3ngg8o3it73trviubjfttz3g&st=1e9y9yg0&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/1d5if36qzezxcpa47ancm/3a2737d973157e61b34ea2a3c07faff7.jpg?rlkey=4l8vyr71cpd6sz23qtfhvd3bg&st=cv0era9f&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/rck3zmq00valj78jhs3rz/5ea7e5c69434ecfb3d7d7ad49d7478cd.png?rlkey=avrx9eqltpmrn2moy8mqp6gan&st=p67dxluw&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+   </div>
+        <div class="max-w-md mx-auto border border-gray-200 rounded-2xl shadow-lg p-6 flex flex-col gap-6">
+            <div class="flex justify-center">
+                <img src="https://www.dropbox.com/scl/fi/tq0adj446l6moqzuopsab/03abd68761d493814b98c479af1c0de1.jpg?rlkey=pgt7yji7h0j8e1jxp439llmto&st=gb174evo&dl=1" 
+                     alt="Main Product" 
+                     class="w-48 h-48 object-cover rounded-xl">
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-[#232B73]">Nike Phantom GT AG ELITE</h3>
+                <p class="text-gray-700 mt-2">Rawdacious - White/Bright Crimson/Pink Blast</p>
+            </div>
+            <a href="https://wa.me/2348033063421" 
+               class="border-2 border-[#232B73] text-[#232B73] bg-white px-6 py-3 rounded-xl font-bold uppercase w-full text-center transition transform hover:bg-[#232B73] hover:text-white hover:scale-105">
+                Order Now
+            </a>
+        </div>
+        </div>
+</section>
+
+               <footer class="flex justify-center text-white py-10 bg-gray-900">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <p>&copy; <span id="current-year">2025</span> UGOWAYS SPORTS. All rights reserved. | BE PROACTIVE</p>
+
+        </div> 
+
+    </footer>
+
+    <script>
+
+        // CRITICAL FIX: Add a script to dynamically set the current year.
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    </script>
 
            
         
